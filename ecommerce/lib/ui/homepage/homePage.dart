@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.orangeAccent,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +35,7 @@ class HomeScreen extends StatelessWidget {
             flashSaleContainer(context),
             /// Flash Sale Box Container
             flashSaleBoxContainer(context),
-
+            
             ///Foreign Products
             foreignProductsContainer(context),
             ///Foreign Products Box Container
@@ -55,7 +56,6 @@ class HomeScreen extends StatelessWidget {
             child: Center(child: Text("Just For You",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
             ),
             SizedBox(height: 10,),
-
 
 
           ],
@@ -126,77 +126,160 @@ Widget homeScreenSubCategories(BuildContext context) {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/free_shipping.png'),fit: BoxFit.cover),
-                  color: Colors.greenAccent,
-                  shape: BoxShape.circle,
-                ),
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/free_shipping.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("  Free \nShipping"),
+                ],
               ),
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/groccery_shopping.png'),fit: BoxFit.cover),
-                  color: Colors.greenAccent,
-                  shape: BoxShape.circle,
-                ),
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/groccery_shopping.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("Groccery \nShopping"),
+                ],
               ),
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/discount_mall.png'),fit: BoxFit.cover),
-                  color: Colors.greenAccent,
-                  shape: BoxShape.circle,
-                ),
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/discount_mall.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("Discount \n  Mall"),
+                ],
               ),
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/sale.png'),fit: BoxFit.cover),
-                  color: Colors.greenAccent,
-                  shape: BoxShape.circle,
-                ),
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/sale.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("Fashion \n  Sale"),
+                ],
               ),
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/topup_estore.png'),fit: BoxFit.cover),
-                  color: Colors.greenAccent,
-                  shape: BoxShape.circle,
-                ),
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/topup_estore.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("Topup \n Store"),
+                ],
               ),
             ],
           ),
-          SizedBox(height: 5.0),
+
+          SizedBox(height: 10,),
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/images/global_collection.png"),
-                radius: 27.0,
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/global_collection.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("  Global \nCollection"),
+                ],
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/images/cloths.png"),
-                radius: 25.0,
+
+             Column(
+             children: [
+               Container(
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage('assets/images/cloths.png'),fit: BoxFit.cover),
+                color: Colors.greenAccent,
+                shape: BoxShape.circle,
+          ),
+        ),
+                Text("Fashion \n Deals"),
+             ],
+           ),
+
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/fast_delivery.gif'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("   Fast \n Shipping"),
+
+                ],
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/images/free_shipping.png"),
-                radius: 25.0,
+
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/service.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("Services"),
+                ],
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/images/service.png"),
-                radius: 25.0,
+
+              Column(
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/categories.png'),fit: BoxFit.cover),
+                      color: Colors.greenAccent,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  Text("Categories"),
+                ],
               ),
-              CircleAvatar(
-                backgroundImage: AssetImage("assets/images/categories.png"),
-                radius: 25.0,
-              ),
+
             ],
           ),
         ],
@@ -233,8 +316,105 @@ Widget categoriesBoxContainer(BuildContext context){
       height: 260,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.grey,
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+                child: Container(
+                  height: 120,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
   );
@@ -260,20 +440,87 @@ Widget flashSaleContainer(BuildContext context){
 }
 
 
+
+
 Widget flashSaleBoxContainer(BuildContext context){
   return Padding(
-    padding: const EdgeInsets.all(13.0),
+    padding: const EdgeInsets.only(right: 13.0,left: 13.0,bottom: 13.0,top: 0.0),
     child: Container(
 
-      height: 250,
-      width: MediaQuery.of(context).size.width,
+      height: 180,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
+      ),
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  height: 180,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  height: 180,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  height: 180,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  height: 180,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: Container(
+                  height: 180,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
   );
 }
+
+
 
 
 Widget foreignProductsContainer(BuildContext context){
@@ -295,6 +542,8 @@ Widget foreignProductsContainer(BuildContext context){
 }
 
 
+
+
 Widget foreignProductsBoxContainer(BuildContext context){
   return Padding(
     padding: const EdgeInsets.all(13.0),
@@ -303,12 +552,69 @@ Widget foreignProductsBoxContainer(BuildContext context){
       height: 250,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+               Container(
+                  width: 365,
+                  height: 110,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage("assets/images/catalogs/ads1.png"),fit: BoxFit.fill),
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0,left: 1.0),
+                child: Container(
+                  height: 135,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0,left: 1.0),
+                child: Container(
+                  height: 135,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0,left: 1.0),
+                child: Container(
+                  height: 135,
+                  width: 118,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ),
   );
 }
+
+
 
 
 Widget mostPopularContainer(BuildContext context){
@@ -330,20 +636,94 @@ Widget mostPopularContainer(BuildContext context){
 }
 
 
+
+
 Widget mostPopularBoxContainer(BuildContext context){
   return Padding(
-    padding: const EdgeInsets.all(13.0),
+    padding: const EdgeInsets.only(right: 13.0,left: 13.0,top: 2.0,bottom: 2.0),
     child: Container(
 
-      height: 170,
+      height: 140,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Colors.grey.shade100,
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Card(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                child: Container(
+                  height: 60,
+                  width: 175,
+                  child: ListTile(
+                    title: Text("Collections From China"),
+                    trailing: Icon(Icons.flight),
+                  ),
+                ),
+                ),
+              Card(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                child: Container(
+                  height: 60,
+                  width: 175,
+                  child: ListTile(
+                    title: Text("Collections From US"),
+                    trailing: Icon(Icons.flight),
+                  ),
+                ),
+                ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Card(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                child: Container(
+                  height: 60,
+                  width: 175,
+                  child: ListTile(
+                    title: Text("Collections From Korea"),
+                    trailing: Icon(Icons.flight),
+                  ),
+                ),
+                ),
+              Card(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0),
+                ),
+                child: Container(
+                  height: 60,
+                  width: 175,
+                  child: ListTile(
+                    title: Text("Collections From Japan"),
+                    trailing: Icon(Icons.flight),
+                  ),
+                ),
+                ),
+            ],
+          ),
+        ],
       ),
     ),
   );
 }
+
+
 
 
 Widget collectionsContainer(BuildContext context){
@@ -365,16 +745,78 @@ Widget collectionsContainer(BuildContext context){
 }
 
 
+
+
 Widget collectionsProductsBoxContainer(BuildContext context){
   return Padding(
     padding: const EdgeInsets.all(13.0),
     child: Container(
 
       height: 250,
-      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        color: Colors.grey,
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        color: Colors.grey.shade100,
+        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+      ),
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
+            child: Card(
+              color: Colors.greenAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(7.0),
+              ),
+              child: Container(
+                height: 190,
+                width: 170,
+
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
+            child: Card(
+              color: Colors.orangeAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(7.0),
+              ),
+              child: Container(
+                height: 10,
+                width: 170,
+
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
+            child: Card(
+              color: Colors.redAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(7.0),
+              ),
+              child: Container(
+                height: 10,
+                width: 170,
+
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
+            child: Card(
+              color: Colors.orangeAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(7.0),
+              ),
+              child: Container(
+                height: 10,
+                width: 170,
+
+              ),
+            ),
+          ),
+        ],
       ),
     ),
   );
