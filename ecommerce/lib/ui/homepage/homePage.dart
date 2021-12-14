@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:ecommerce/ui/components/app_icons.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orangeAccent,
+      backgroundColor: Colors.deepPurpleAccent,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,27 +36,35 @@ class HomeScreen extends StatelessWidget {
             flashSaleContainer(context),
             /// Flash Sale Box Container
             flashSaleBoxContainer(context),
-            
-            ///Foreign Products
-            foreignProductsContainer(context),
-            ///Foreign Products Box Container
-            foreignProductsBoxContainer(context),
 
-            ///Most Popular
-            mostPopularContainer(context),
-            ///Most Popular Box Container
-            mostPopularBoxContainer(context),
-
-            ///Collections
-            collectionsContainer(context),
-            ///Collections Products Box Container
-            collectionsProductsBoxContainer(context),
-
-            ///JUST FOR YOU TEXT
             Container(
-            child: Center(child: Text("Just For You",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
+              color: Colors.white,
+              child: Column(
+                children: [
+                  ///Foreign Products
+                  foreignProductsContainer(context),
+                  ///Foreign Products Box Container
+                  foreignProductsBoxContainer(context),
+
+                  ///Most Popular
+                  mostPopularContainer(context),
+                  ///Most Popular Box Container
+                  mostPopularBoxContainer(context),
+
+                  ///Collections
+                  collectionsContainer(context),
+                  ///Collections Products Box Container
+                  collectionsProductsBoxContainer(context),
+
+                  ///JUST FOR YOU TEXT
+                  Container(
+                    child: Center(child: Text("Just For You",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
+                  ),
+                  SizedBox(height: 10,),
+                ],
+              ),
             ),
-            SizedBox(height: 10,),
+
 
 
           ],
@@ -289,6 +298,8 @@ Widget homeScreenSubCategories(BuildContext context) {
 }
 
 
+
+
 Widget categoriesContainer(BuildContext context){
   return Container(
     child: Row(
@@ -323,95 +334,20 @@ Widget categoriesBoxContainer(BuildContext context){
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-                  ),
-                ),
-              ),
+              categoriesProduct(context),
+              categoriesProduct(context),
+              categoriesProduct(context),
+              categoriesProduct(context),
             ],
           ),
+          SizedBox(height: 5.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
-                child: Container(
-                  height: 120,
-                  width: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-                  ),
-                ),
-              ),
+              categoriesProduct(context),
+              categoriesProduct(context),
+              categoriesProduct(context),
+              categoriesProduct(context),
             ],
           ),
         ],
@@ -446,72 +382,21 @@ Widget flashSaleBoxContainer(BuildContext context){
   return Padding(
     padding: const EdgeInsets.only(right: 13.0,left: 13.0,bottom: 13.0,top: 0.0),
     child: Container(
-
       height: 180,
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
         color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(5.0)),
       ),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: Container(
-                  height: 180,
-                  width: 118,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: Container(
-                  height: 180,
-                  width: 118,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: Container(
-                  height: 180,
-                  width: 118,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: Container(
-                  height: 180,
-                  width: 118,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 10.0),
-                child: Container(
-                  height: 180,
-                  width: 118,
-                  decoration: BoxDecoration(
-                    color: Colors.greenAccent,
-
-                  ),
-                ),
-              ),
+              flashSaleProduct(context),
+              flashSaleProduct(context),
+              flashSaleProduct(context),
+              flashSaleProduct(context),
+              flashSaleProduct(context),
             ],
           ),
         ],
@@ -522,7 +407,7 @@ Widget flashSaleBoxContainer(BuildContext context){
 
 
 
-
+/// MAIN WIDGET SEGMENTS
 Widget foreignProductsContainer(BuildContext context){
   return Container(
     child: Row(
@@ -563,7 +448,7 @@ Widget foreignProductsBoxContainer(BuildContext context){
                   width: 365,
                   height: 110,
                   decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage("assets/images/catalogs/ads1.png"),fit: BoxFit.fill),
+                    image: DecorationImage(image: AssetImage("assets/images/catalogs/ads2.png"),fit: BoxFit.fill),
                     color: Colors.orange,
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   ),
@@ -760,63 +645,119 @@ Widget collectionsProductsBoxContainer(BuildContext context){
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
-            child: Card(
-              color: Colors.greenAccent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(7.0),
-              ),
-              child: Container(
-                height: 190,
-                width: 170,
+          collectionContianer(context),
+          collectionContianer(context),
+          collectionContianer(context),
+          collectionContianer(context),
+        ],
+      ),
+    ),
+  );
+}
 
-              ),
-            ),
+
+
+
+///Neccesery Codes
+
+Widget flashSaleProduct(BuildContext context){
+  return Padding(
+    padding: const EdgeInsets.only(left: 5.0,top: 5.0,right: 2.5,bottom: 5.0),
+    child: Container(
+      height: 180,
+      width: 118,
+      decoration: BoxDecoration(
+        color: Colors.greenAccent,
+      ),
+      child: Column(
+        children: [
+          Container(
+            height: 125,
+            width: 118,
+            color: Colors.grey.shade100,
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
-            child: Card(
-              color: Colors.orangeAccent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(7.0),
-              ),
-              child: Container(
-                height: 10,
-                width: 170,
-
-              ),
-            ),
+          Container(
+            height: 24,
+            width: 118,
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
-            child: Card(
-              color: Colors.redAccent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(7.0),
-              ),
-              child: Container(
-                height: 10,
-                width: 170,
-
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
-            child: Card(
-              color: Colors.orangeAccent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(7.0),
-              ),
-              child: Container(
-                height: 10,
-                width: 170,
-
-              ),
+          Container(
+            width: 118,
+            color: Colors.white,
+            child: Row(
+              children: [
+                Text("৳",style: TextStyle(color: Colors.orangeAccent,fontWeight: FontWeight.bold),),
+                Text("000",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 18),),
+              ],
             ),
           ),
         ],
+      ),
+    ),
+  );
+}
+
+Widget categoriesProduct(BuildContext context){
+  return Padding(
+    padding: const EdgeInsets.only(top: 8.0,left: 4.0,right: 4.0,),
+    child: Column(
+      children: [
+        Container(
+          height: 80,
+          width: 80,
+          decoration: BoxDecoration(
+            color: Colors.grey.shade100,
+          ),
+        ),
+        SizedBox(height: 5.0,),
+        Text("#name"),
+      ],
+    ),
+  );
+}
+
+Widget collectionContianer(BuildContext context){
+  return Padding(
+    padding: const EdgeInsets.only(top: 6.0,bottom: 6.0,left: 2.0,),
+    child: Card(
+      color: Colors.redAccent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.0),
+      ),
+      child: Container(
+        height: 190,
+        width: 170,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text("#Titles",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text("#sub titles",style: TextStyle(color: Colors.white),),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 150,
+                width: 150,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                ),
+              ),
+            ),
+          ],
+        ),
+
       ),
     ),
   );

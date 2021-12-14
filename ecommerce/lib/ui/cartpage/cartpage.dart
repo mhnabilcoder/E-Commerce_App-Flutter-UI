@@ -33,6 +33,10 @@ class CartScreen extends StatelessWidget {
               height: 20,
             ),
             Container(
+              child: Center(child: Text("Just For You",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
+            ),
+            SizedBox(height: 10,),
+            Container(
               width: MediaQuery.of(context).size.width,
               height: 350,
               color: Colors.orange,

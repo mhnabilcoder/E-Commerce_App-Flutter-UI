@@ -196,6 +196,15 @@ Widget OtherContainer(BuildContext context){
     width: MediaQuery.of(context).size.width,
     height: 70,
     color: Colors.white,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+         Text("Coins"),
+         Text("benner image"),
+         Text("Earn/Redeem > \n Coins "),
+
+      ],
+    ),
   );
 }
 
