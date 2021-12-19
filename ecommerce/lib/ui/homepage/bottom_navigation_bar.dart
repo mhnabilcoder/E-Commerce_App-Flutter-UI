@@ -1,5 +1,6 @@
 
 import 'package:ecommerce/ui/accountpage/accountpage.dart';
+import 'package:ecommerce/ui/accountpage/preAccountPage.dart';
 import 'package:ecommerce/ui/cartpage/cartpage.dart';
 import 'package:ecommerce/ui/homepage/homePage.dart';
 import 'package:ecommerce/ui/messagepage/messagepage.dart';
@@ -18,7 +19,7 @@ class _mainScreenState extends State<mainScreen> {
     HomeScreen(),
     MessageScreen(),
     CartScreen(),
-    AccountScreen(),
+    PreAccountScreen(),
   ];
 
   void _onItemTapped(int index) {

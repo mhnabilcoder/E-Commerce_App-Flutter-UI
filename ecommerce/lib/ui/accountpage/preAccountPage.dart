@@ -2,8 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AccountScreen extends StatelessWidget {
-  const AccountScreen({Key? key}) : super(key: key);
+class PreAccountScreen extends StatelessWidget {
+  const PreAccountScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +22,6 @@ class AccountScreen extends StatelessWidget {
             SizedBox(height: 4,),
             ///MY ORDERS
             myOrdersContainer(context),
-            ///My Orders Containers
-            SizedBox(height: 5,),
-            OtherContainer(context),
             SizedBox(height: 5,),
             /// MY SERVICES
             myServicesContainer(context),
@@ -46,7 +43,8 @@ Widget appbarArea(BuildContext context){
     width: MediaQuery.of(context).size.width,
     height: 200,
     color: Colors.redAccent,
-    child: Stack(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SafeArea(
           child: Padding(
@@ -54,36 +52,26 @@ Widget appbarArea(BuildContext context){
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: NetworkImage("https://aeealberta.org/wp-content/uploads/2018/10/profile.png"),
+                Row(
+                  children: [
+                    Icon(Icons.account_circle,size: 35,color: Colors.white,),
+                    SizedBox(width: 2,),
+                    Text("Please Signup for better experience",style: TextStyle(color: Colors.white),),
+                  ],
                 ),
                 Icon(Icons.settings,size: 25,color: Colors.white,),
+
               ],
             ),
           ),
         ),
-        Positioned(
-          bottom: 20,
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 5.0),
-                child: Icon(Icons.access_alarm_outlined,color: Colors.white,size: 35,),
-              ),
-              Icon(Icons.ac_unit_outlined,color: Colors.white,size: 35,),
-              Icon(Icons.accessibility_new_outlined,color: Colors.white,size: 35,),
-              Padding(
-                padding: const EdgeInsets.only(right: 5.0),
-                child: Icon(Icons.accessible_forward_outlined,color: Colors.white,size: 35,),
-              ),
-            ],
-              ),
-          ),
-        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 40.0),
+          child: ElevatedButton(onPressed: () {
+
+          }, child: Text("Log In / Sign Up",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold),),
+            style: ElevatedButton.styleFrom(primary: Colors.white),),
+        )
       ],
     ),
   );
@@ -200,22 +188,6 @@ Widget myOrdersContainer(BuildContext context){
 }
 
 
-Widget OtherContainer(BuildContext context){
-  return Container(
-    width: MediaQuery.of(context).size.width,
-    height: 70,
-    color: Colors.white,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-         Text("Coins"),
-         Text("benner image"),
-         Text("Earn/Redeem > \n Coins "),
-
-      ],
-    ),
-  );
-}
 
 
 Widget myServicesContainer(BuildContext context){
