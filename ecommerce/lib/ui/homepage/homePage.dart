@@ -1,4 +1,5 @@
 
+import 'package:ecommerce/ui/components/productsRecomendationContainer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -61,6 +62,10 @@ class HomeScreen extends StatelessWidget {
                     child: Center(child: Text("Just For You",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
                   ),
                   SizedBox(height: 10,),
+
+                  ///JUST FOR YOU PRODUCTS
+                  ProductsRecomendationContainerBOx(), //components directory
+
                 ],
               ),
             ),
